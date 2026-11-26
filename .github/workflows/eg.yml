@@ -1,0 +1,12 @@
+name: eg5533
+on: [workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: run
+        run: python3 probe_egress.py
